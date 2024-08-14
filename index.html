@@ -1,0 +1,1759 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Laziz</title>
+        <meta name="author" content="Jhon Doe">
+        <meta name="description" content="HTML,CSS,JavaScript">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/master.css" />
+        <link rel="icon" href="my logo/laziz logo.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
+        <div class="container-fluid">
+        <a class="navbar-brand logo-food" href="#"><img src="data:image/png;base64,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" alt="logo" title="food logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+            </ul>
+            <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+        </div>
+    </nav>
+
+<div class="container">
+<div class="col container-fluid">
+                                 <h4 class=" btn btn-outline-danger">Main dishes (Chicken) الاطباق الرئيسية</h4>
+                                 <br>
+                                 <img src="my logo/My Place logo.png" style=" display: block;
+                                 margin-left: auto;
+                                 margin-right: auto;
+                                 width: 100px;" alt=""/>
+                        <br>
+                        <p>crispy           <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i>             كريسبي</p>
+                                                                             <br>
+                         <div class="container">
+                         <div class="row">
+                                <div class="card" style="width: 18rem;">
+                                  <h5 class="card-header">Crispy</h5>
+                                  <img class="card-img-top" src="my images/Crispy-Fried-Chicken.png" alt="Card image cap">
+                                  <div class="card-body">
+                                    <h5 class="card-title">crunch</h5>
+                                  </div>
+                                </div>
+                                <div class="card" style="width: 18rem;">
+                                  <h5 class="card-header">Crispy</h5>
+                                  <div class="card-body">
+                                    <h5 class="card-title">crispy chicken</h5>
+                                  </div>
+                                </div>
+                                <div class="card" style="width: 18rem;">
+                                  <h5 class="card-header">Crispy</h5>
+                                  <div class="card-body">
+                                    <h5 class="card-title">Crispy crunchy</h5>
+                                  </div>
+                                </div>
+                        </div>
+                       <br>
+                      <p>Grilled fillet       <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i>     فيلية مشوي</p>
+                      <br>
+                     <div class="container">
+                      <div class="row">
+                        <div class="card" style="width: 18rem;">
+                          <h5 class="card-header">grilled Fillet</h5>
+                          <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                          <h5 class="card-header">Featured</h5>
+                          <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                          <h5 class="card-header">Featured</h5>
+                          <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                        </div>
+                      </div>
+                     </div>
+    <br>
+<br>
+<p>Half grilled chicken  <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i> نص دجاجه مشوية</p> 
+<br>
+<div class="container">
+  <div class="row">
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+ </div>
+<br>
+<p>Grilled fillet       <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i>     فيلية مشوي</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>shish taouk           <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i>      شيش طاووق</p>
+<br>
+<div class="container">
+  <div class="row">
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+ </div>
+<br>
+<p>Grilled fillet       <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i>     فيلية مشوي</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>Aqashi chicken        <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i>    اقاشي تشكن</p>
+</div>
+<br>
+<div class="container">
+  <div class="row">
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+ </div>
+<br>
+<p>Grilled fillet       <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i>     فيلية مشوي</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<!--<hr>
+<div class="carousel slide container w-75" id="slide">
+  <ol class="carousel-indicator">
+  <li data-target="#slide" data-slide="0" class="active"></li>
+  <li data-target="#slide" data-slide="1"></li>
+  <li data-target="#slide" data-slide="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="my images/chicken main dishes/slide1.jpg" alt="" />
+    </div>
+    <div class="carousel-item">
+      <img src="my images/chicken main dishes/slide2.jpg" alt="" />
+    </div>
+    <div class="carousel-item">
+      <img src="my images/chicken main dishes/slide3.jpeg" alt="" />
+    </div>
+  </div>
+  </div>
+<hr>-->
+<br>
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="my images/chicken main dishes/slide1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="my images/chicken main dishes/slide2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="my images/chicken main dishes/slide3.jpeg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<br>
+                                 <div class="col container-fluid">
+                                 <h4 class=" btn btn-outline-danger">Main dishes (Meat) الاطباق الرئيسية لحمة</h4>
+                                 <br>
+                                 <img src="my logo/My Place logo.png" class="laziz" />
+<br>
+<p>My Place Mixed Grilled  مشكل مشاوي ماي بليس</p>
+<br>
+<div class="container">
+  <div class="row">
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+ </div>
+<br>
+<p>Grilled fillet       <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i>     فيلية مشوي</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>Main Dish Cofta  <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i> طلب كفتة</p>
+<div class="container">
+  <div class="row">
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+ </div>
+<br>
+<p>Grilled fillet       <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i>     فيلية مشوي</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br> 
+<p>Main dish aqashi Meat  <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i> طلب اقاشي لحمة</p>
+<br>
+<div class="container">
+  <div class="row">
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+ </div>
+<br>
+<p>Grilled fillet       <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i>     فيلية مشوي</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<hr>
+</div>
+<br>
+                                  <div class="col container-fluid">
+                                  <h4 class="btn btn-outline-danger col-justify-content-center">Meat Sandwiches سندوتشات لحمة</h4>
+                                  <br>
+                                  <img src="my logo/laziz logo.png" class="laziz" />
+<br>
+<p>Kofta sandwich  <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i> ساندويتش كفته</p>
+<br>
+<div class="container">
+  <div class="row">
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+         <div class="card" style="width: 18rem;">
+           <h5 class="card-header">Featured</h5>
+           <div class="card-body">
+             <h5 class="card-title">Special title treatment</h5>
+             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+         </div>
+ </div>
+<br>
+<p>Grilled fillet       <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i>     فيلية مشوي</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>Kofta sandwitch  <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i> ساندويتش كفته بالجبن</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>Aqashi meat sanwich  <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i> ساندويتش اقاش لحمة</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>Aqashi meat sandwitch double  <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i> ساندويتش اقاشي لحمة دبل</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+                                    <div class= "col container-fluid">
+                                    <h4 class=" btn btn-outline-danger">Chicken Sandwiches   سندوتشات الدجاج</h4>
+                                    <br>
+                                    <img src="my logo/My Place logo.png" class="laziz" />
+                                    <br>
+                        <p style="color: goldenrod;">Fried &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; مقلي</p>
+                        <p>Chicken superman  <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i> تشيكن سوبريم</p>
+                        <br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+                        <p>Crispy chicken  <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i> تشيكن كريسبي</p>
+                        <br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+                        <p>chicken jalapino  <i  class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i> تشيكن هالبينو</p>
+                        <br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+                        <p>Chicken pane  <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i> تشيكن باينة</p>
+                        <br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+                        <p style="color: goldenrod;">Grilled &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; مشوي</p>
+                       <p>Shish taouk  <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i> شيش طاووق</p>
+                       <br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+                 <p>Chicken caldo  <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i> تشيكن كالدو</p>
+                 <br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+         <p>Chicken star  <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i> تشيكن استار</p>
+         <br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+          <p>Aqashi chicken  <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i> اقاشي تشيكن</p>
+          <br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>Aqashi chicken double  <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i> اقاشي تشيكن دبل</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+</div>
+<br>
+</div>
+                                                     <div class= "col container-fluid">
+                                                     <h4 class=" btn btn-outline-warning">Beef Burger  برجر لحم</h4>
+                                                     <br>
+                                                     <img src="my logo/laziz logo.png" class="laziz" />
+<br>
+<p>برجر كلاسيك</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>برجر جبنه</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>برجر باربيكيو</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>برجر ميكسيكان</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>جولدن برجر</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>تاور برجر</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<br>
+                                                        <div class= "col container-fluid">
+                                                        <h4 class=" btn btn-outline-primary">Appetizers    المقبلات</h4>
+                                                        <br>
+                                                        <img src="my logo/My Place logo.png" class="laziz" alt=""/>
+                                                        <br>
+<p>لافا فرايز عادي/حراق</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card text-white bg-info mb-3" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-info mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-info mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>بطاطس بالثوم /الأعشاب</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card text-white bg-info mb-3" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-info mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-info mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>بطاطس مقلية</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card text-white bg-info mb-3" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-info mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-info mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>سلطة لذيذ مشكل</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card text-white bg-info mb-3" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-info mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-info mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>السمبوسة لحمة /فراخ</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card text-white bg-info mb-3" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-info mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card text-white bg-info mb-3" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<br>
+</div>
+<br>
+                                                        <div class= "col container-fluid" style="align-items: center;">
+                                                        <h1 class=" btn btn-outline-danger">Foul & Falafil   فول و فلافل</h1>
+                                                        <br>
+                                                        <img src="my logo/laziz logo.png" class="laziz" />
+                                                        <br>
+                                        <p>Foul&Falafel   فول وفلافل</p>
+                                                   <br>
+                           <div class="container">
+               <div class="row">
+                                <div class="card" style="width: 18rem;">
+                                <h5 class="card-header">grilled Fillet</h5>
+             <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+             </div>
+                     </div>
+                      <div class="card" style="width: 18rem;">
+             <h5 class="card-header">Featured</h5>
+                 <div class="card-body">
+                 <h5 class="card-title">Special title treatment</h5>
+               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>طلب فول زيت زيتون</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>طلب فول زيت حار</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>طلب فول زيت سمسم</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>طلب بيض أومليت</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>طلب طعمية5 قطع</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>ساندويتش فول و طعمية</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>ساندويتش طعمية</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>ساندويتش فول</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>صاروخ ماي بليس</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<p>ديناميت ماي بليس</p>
+<br>
+<div class="container">
+<div class="row">
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">grilled Fillet</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+   <h5 class="card-header">Featured</h5>
+   <img class="card-img-top" src="my images/Grilled fillet.jpeg" alt="Card image cap">
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
+</div>
+</div>
+<br>
+<br>
+</div>
+<br>
+                                                       <div class="col-md-8 container-fluid">
+                                                       <h4 class=" btn-outline-success" id="blue">Soft Drink &nbsp; &nbsp; &nbsp; &nbsp;المشروبات</h4>
+    <br>
+    <i  class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i>Water
+    <br>
+    <i class="fa-solid fa-circle-plus" id="plus"></i><i class="fa-solid fa-circle-minus" id="minus"></i>Pepsi Drink
+    </div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    };
+    </script>
+<br>
+<small id="total" class="value"></small>
+<span class="dot" id="dot1"></span>
+<br>
+<footer>
+    <Image class="laziz" src="my logo/My Place logo.png" alt=""/>
+<div>
+    <div class="row">
+        <div class="col-3"><a href="index.html">satrt</a></div>
+        <br>
+        <div class="col-3"><a href="Pizza.html">pizza</a></div>
+        <br>
+        <div class="col-3"><a href="offers&Competitions.html">offers</a></div>
+        <br>
+        <div class="col-3"><a href="My place login.html">Login<i class="fa-solid fa-right-to-bracket"></i></a></div>
+    </div>
+</div>
+<br>
+<!-- <div class="social">
+<a href="https://www.facebook.com/profile.php?id=61553601728513&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+<a href="https://www.instagram.com/myplace_egypt?igsh=MWdtYzYxMTB1bXI0Mg=="><i class="fa-brands fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@myplace.egypt?_t=8nQtturYZzp&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+</div> -->
+                                                             <div>
+                                                            <h5 style="background-color: brown; width: fit-content;" align="center">CONTACKT US</h5>
+                                                            <i class="fa-solid fa-truck-fast"></i> <p style="direction: rtl;"><p style="direction: rtl;">Delivery</p>  خدمة توصيل الطلبات للمنازل</p>
+                                                            01119777902-0106900227
+                                                             <h5 style="direction: ltr; align-items: center;">Follow Us:</h5>
+                                                             <img src="my logo/My Place logo.png" alt="" class="laziz"/>
+                                                             <br>
+                                                             <img src="my logo/laziz logo.png" alt="" class="laziz"/>
+                                                          <div class="social">
+                                                            <a href="https://www.facebook.com/profile.php?id=61553601728513&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+                                                            <a href="https://www.instagram.com/myplace_egypt?igsh=MWdtYzYxMTB1bXI0Mg=="><i class="fa-brands fa-instagram"></i></a>
+                                                            <a href="https://www.tiktok.com/@myplace.egypt?_t=8nQtturYZzp&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+                                                          </div>
+                                                             <hr>
+                                                             <h5 style="background-color: rgb(57, 172, 57); width: fit-content;">LOCATION</h5>
+                                                            <br>
+                                                             <i class="fa-solid fa-location-dot"></i>
+                                                             <br>
+                                 <p style="direction: rtl;">المهندسين شارع الحجاز جوار سعودي</p>
+                            <img src="placebo.jpg" alt="" width="300px">
+                                                             </div>
+
+</footer>
+<div class="young">copyright &copy; 2024 All rights reserved | Made by <b>Mudther Yassin</b></div>
+<span class="dot" id="dot"></span>
+<!-- <script src="https://kit.fontawesome.com/6a6f55550c.js"></script>
+<script src="https://kit.fontawesome.com/6a6f55550c.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="My Place.js"></script> -->
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
